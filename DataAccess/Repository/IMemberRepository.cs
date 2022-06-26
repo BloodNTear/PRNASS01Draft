@@ -14,5 +14,6 @@ namespace DataAccess.MemberRepository
         bool Delete(int MemberID);
         MemberObject Get(int MemberID);
         IEnumerable<MemberObject> GetMemberList();
+        bool Login(string Email, string Password);
     }
 }

@@ -66,6 +66,17 @@ namespace DataAccess.MemberRepository
             }
         }
 
+        public bool Login(string Email, string Password)
+        {
+            if(Email == null || Password == null)
+            {
+                return false;
+            } else {
+                return MemberDBContext.Instance.Login(Email, Password);
+            }
+           
+        }
+
         public bool Update(MemberObject mem)
         {
             try

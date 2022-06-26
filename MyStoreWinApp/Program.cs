@@ -9,6 +9,8 @@ namespace MyStoreWinApp
         static void Main()
         {
             ApplicationConfiguration.Initialize();
+            Application.Run(new frmLogin());
+            Application.Run(new frmMemberList());
             Application.Run(new frmMemberDetail());
         }
     }

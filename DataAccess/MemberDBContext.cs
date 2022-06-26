@@ -228,5 +228,56 @@ namespace DataAccess
                 CloseConnection();
             }
         }
+
+        public bool Login(string Email, string Password)
+        {
+            MemberObject member = null;
+            IDataReader dataReader = null;
+            string SQLSelect = "SELECT "
+                                + "MemberID, MemberName, Email, Password, City, Country "
+                                + "FROM "
+                                + "Members "
+                                + "WHERE "
+                                + "Email = @Email "
+                                + "AND "
+                                + "Password = @Password";
+            try
+            {
+                var parameters = new List<SqlParameter>();
+                parameters.Add(dataProvider.CreateParameter("@Email", 100, Email, DbType.Int32));
+                parameters.Add(dataProvider.CreateParameter("@Password", 100, Email, DbType.Int32));
+
+                dataReader = dataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection, parameters.ToArray());
+                if (dataReader.Read())
+                {
+                    member = new MemberObject
+                    {
+                        MemberID = dataReader.GetInt32(0),
+                        MemberName = dataReader.GetString(1),
+                        Email = dataReader.GetString(2),
+                        Password = dataReader.GetString(3),
+                        City = dataReader.GetString(4),
+                        Country = dataReader.GetString(5)
+                    };
+                }
+
+                if(member != null)
+                {
+                    return true;
+                } else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                dataReader.Close();
+                CloseConnection();
+            }
+        }
     }
 }

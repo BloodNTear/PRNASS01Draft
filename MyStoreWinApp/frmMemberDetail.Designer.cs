@@ -59,6 +59,7 @@
             // 
             this.txtMemberID.Location = new System.Drawing.Point(219, 78);
             this.txtMemberID.Name = "txtMemberID";
+            this.txtMemberID.PlaceholderText = "Member ID";
             this.txtMemberID.Size = new System.Drawing.Size(230, 27);
             this.txtMemberID.TabIndex = 1;
             // 
@@ -76,6 +77,7 @@
             // 
             this.txtCountry.Location = new System.Drawing.Point(219, 243);
             this.txtCountry.Name = "txtCountry";
+            this.txtCountry.PlaceholderText = "Country";
             this.txtCountry.Size = new System.Drawing.Size(230, 27);
             this.txtCountry.TabIndex = 3;
             // 
@@ -83,6 +85,7 @@
             // 
             this.txtCity.Location = new System.Drawing.Point(219, 211);
             this.txtCity.Name = "txtCity";
+            this.txtCity.PlaceholderText = "City";
             this.txtCity.Size = new System.Drawing.Size(230, 27);
             this.txtCity.TabIndex = 4;
             // 
@@ -90,6 +93,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(219, 177);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PlaceholderText = "Password";
             this.txtPassword.Size = new System.Drawing.Size(230, 27);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.UseSystemPasswordChar = true;
@@ -98,6 +102,7 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(219, 144);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PlaceholderText = "Email";
             this.txtEmail.Size = new System.Drawing.Size(230, 27);
             this.txtEmail.TabIndex = 6;
             // 
@@ -105,6 +110,7 @@
             // 
             this.txtMemberName.Location = new System.Drawing.Point(219, 111);
             this.txtMemberName.Name = "txtMemberName";
+            this.txtMemberName.PlaceholderText = "Member Name";
             this.txtMemberName.Size = new System.Drawing.Size(230, 27);
             this.txtMemberName.TabIndex = 7;
             // 
