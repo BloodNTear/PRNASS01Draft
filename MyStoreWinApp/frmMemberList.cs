@@ -176,5 +176,39 @@ namespace MyStoreWinApp
             list.Sort();
             LoadMemberList(list);
         }
+
+        private void btnSearchByCity_Click(object sender, EventArgs e)
+        {
+            string search = txtSearchCity.Text;
+            repository = new MemberRepository();
+            List<MemberObject> members = new List<MemberObject>();
+            members = repository.SearchByCity(search);
+            if (members.Count == 0)
+            {
+                MessageBox.Show("No Result Found");
+                return;
+            }
+            else
+            {
+                LoadMemberList(members);
+            }
+        }
+
+        private void btnSearchByCountry_Click(object sender, EventArgs e)
+        {
+            string search = txtSearchCountry.Text;
+            repository = new MemberRepository();
+            List<MemberObject> members = new List<MemberObject>();
+            members = repository.SearchByCountry(search);
+            if (members.Count == 0)
+            {
+                MessageBox.Show("No Result Found");
+                return;
+            }
+            else
+            {
+                LoadMemberList(members);
+            }
+        }
     }
 }

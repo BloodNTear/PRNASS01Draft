@@ -116,5 +116,17 @@ namespace DataAccess.MemberRepository
             result = MemberDBContext.Instance.GetMemberByName(name);
             return result;
         }
+        public List<MemberObject> SearchByCity(string city)
+        {
+            List<MemberObject> result = new List<MemberObject>();
+            result = MemberDBContext.Instance.GetMemberByCity(city);
+            return result;
+        }
+        public List<MemberObject> SearchByCountry(string country)
+        {
+            List<MemberObject> result = new List<MemberObject>();
+            result = MemberDBContext.Instance.GetMemberByCity(country);
+            return result;
+        }
     }
 }

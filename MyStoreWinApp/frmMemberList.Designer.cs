@@ -45,8 +45,12 @@
             this.txtMemberID = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.btnSort = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnSearchByCity = new System.Windows.Forms.Button();
+            this.txtSearchCity = new System.Windows.Forms.TextBox();
+            this.btnSearchByCountry = new System.Windows.Forms.Button();
+            this.txtSearchCountry = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +58,7 @@
             // 
             this.lbMemListTitle.AutoSize = true;
             this.lbMemListTitle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbMemListTitle.Location = new System.Drawing.Point(256, 9);
+            this.lbMemListTitle.Location = new System.Drawing.Point(292, 9);
             this.lbMemListTitle.Name = "lbMemListTitle";
             this.lbMemListTitle.Size = new System.Drawing.Size(207, 46);
             this.lbMemListTitle.TabIndex = 0;
@@ -75,20 +79,20 @@
             this.txtMemberName.Location = new System.Drawing.Point(174, 72);
             this.txtMemberName.Name = "txtMemberName";
             this.txtMemberName.PlaceholderText = "MemberName";
-            this.txtMemberName.Size = new System.Drawing.Size(188, 27);
+            this.txtMemberName.Size = new System.Drawing.Size(216, 27);
             this.txtMemberName.TabIndex = 2;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(502, 71);
+            this.txtEmail.Location = new System.Drawing.Point(595, 75);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PlaceholderText = "Email";
-            this.txtEmail.Size = new System.Drawing.Size(217, 27);
+            this.txtEmail.Size = new System.Drawing.Size(247, 27);
             this.txtEmail.TabIndex = 3;
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(12, 425);
+            this.btnLoad.Location = new System.Drawing.Point(12, 469);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(94, 29);
             this.btnLoad.TabIndex = 4;
@@ -100,7 +104,7 @@
             // 
             this.lbEmail.AutoSize = true;
             this.lbEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbEmail.Location = new System.Drawing.Point(404, 72);
+            this.lbEmail.Location = new System.Drawing.Point(463, 74);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(59, 28);
             this.lbEmail.TabIndex = 5;
@@ -121,14 +125,14 @@
             this.txtCity.Location = new System.Drawing.Point(174, 121);
             this.txtCity.Name = "txtCity";
             this.txtCity.PlaceholderText = "City";
-            this.txtCity.Size = new System.Drawing.Size(188, 27);
+            this.txtCity.Size = new System.Drawing.Size(216, 27);
             this.txtCity.TabIndex = 7;
             // 
             // lbCountry
             // 
             this.lbCountry.AutoSize = true;
             this.lbCountry.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbCountry.Location = new System.Drawing.Point(404, 121);
+            this.lbCountry.Location = new System.Drawing.Point(463, 120);
             this.lbCountry.Name = "lbCountry";
             this.lbCountry.Size = new System.Drawing.Size(82, 28);
             this.lbCountry.TabIndex = 8;
@@ -136,15 +140,15 @@
             // 
             // txtCountry
             // 
-            this.txtCountry.Location = new System.Drawing.Point(502, 122);
+            this.txtCountry.Location = new System.Drawing.Point(595, 125);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.PlaceholderText = "Country";
-            this.txtCountry.Size = new System.Drawing.Size(217, 27);
+            this.txtCountry.Size = new System.Drawing.Size(247, 27);
             this.txtCountry.TabIndex = 9;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(625, 425);
+            this.btnDelete.Location = new System.Drawing.Point(625, 469);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(94, 29);
             this.btnDelete.TabIndex = 10;
@@ -154,7 +158,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(141, 425);
+            this.btnAdd.Location = new System.Drawing.Point(135, 469);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(94, 29);
             this.btnAdd.TabIndex = 11;
@@ -165,11 +169,11 @@
             // dgvMemberList
             // 
             this.dgvMemberList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMemberList.Location = new System.Drawing.Point(12, 231);
+            this.dgvMemberList.Location = new System.Drawing.Point(12, 275);
             this.dgvMemberList.Name = "dgvMemberList";
             this.dgvMemberList.RowHeadersWidth = 51;
             this.dgvMemberList.RowTemplate.Height = 29;
-            this.dgvMemberList.Size = new System.Drawing.Size(707, 188);
+            this.dgvMemberList.Size = new System.Drawing.Size(837, 188);
             this.dgvMemberList.TabIndex = 12;
             // 
             // lbMemberID
@@ -189,12 +193,12 @@
             this.txtMemberID.Name = "txtMemberID";
             this.txtMemberID.PlaceholderText = "Member ID";
             this.txtMemberID.ReadOnly = true;
-            this.txtMemberID.Size = new System.Drawing.Size(188, 34);
+            this.txtMemberID.Size = new System.Drawing.Size(216, 34);
             this.txtMemberID.TabIndex = 14;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(502, 425);
+            this.btnSave.Location = new System.Drawing.Point(502, 469);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(94, 29);
             this.btnSave.TabIndex = 15;
@@ -204,26 +208,15 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(502, 185);
+            this.txtSearch.Location = new System.Drawing.Point(595, 182);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PlaceholderText = "Incomplete Name Accepted";
-            this.txtSearch.Size = new System.Drawing.Size(217, 27);
+            this.txtSearch.Size = new System.Drawing.Size(247, 27);
             this.txtSearch.TabIndex = 17;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.Location = new System.Drawing.Point(402, 177);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(94, 40);
-            this.btnSearch.TabIndex = 18;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnSort
             // 
-            this.btnSort.Location = new System.Drawing.Point(268, 425);
+            this.btnSort.Location = new System.Drawing.Point(256, 469);
             this.btnSort.Name = "btnSort";
             this.btnSort.Size = new System.Drawing.Size(119, 29);
             this.btnSort.TabIndex = 19;
@@ -231,13 +224,62 @@
             this.btnSort.UseVisualStyleBackColor = true;
             this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(463, 183);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(94, 29);
+            this.btnSearch.TabIndex = 20;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // btnSearchByCity
+            // 
+            this.btnSearchByCity.Location = new System.Drawing.Point(12, 240);
+            this.btnSearchByCity.Name = "btnSearchByCity";
+            this.btnSearchByCity.Size = new System.Drawing.Size(94, 29);
+            this.btnSearchByCity.TabIndex = 21;
+            this.btnSearchByCity.Text = "Search";
+            this.btnSearchByCity.UseVisualStyleBackColor = true;
+            this.btnSearchByCity.Click += new System.EventHandler(this.btnSearchByCity_Click);
+            // 
+            // txtSearchCity
+            // 
+            this.txtSearchCity.Location = new System.Drawing.Point(145, 242);
+            this.txtSearchCity.Name = "txtSearchCity";
+            this.txtSearchCity.PlaceholderText = "Incomplete City Accepted";
+            this.txtSearchCity.Size = new System.Drawing.Size(245, 27);
+            this.txtSearchCity.TabIndex = 22;
+            // 
+            // btnSearchByCountry
+            // 
+            this.btnSearchByCountry.Location = new System.Drawing.Point(463, 241);
+            this.btnSearchByCountry.Name = "btnSearchByCountry";
+            this.btnSearchByCountry.Size = new System.Drawing.Size(94, 29);
+            this.btnSearchByCountry.TabIndex = 23;
+            this.btnSearchByCountry.Text = "Search";
+            this.btnSearchByCountry.UseVisualStyleBackColor = true;
+            this.btnSearchByCountry.Click += new System.EventHandler(this.btnSearchByCountry_Click);
+            // 
+            // txtSearchCountry
+            // 
+            this.txtSearchCountry.Location = new System.Drawing.Point(595, 241);
+            this.txtSearchCountry.Name = "txtSearchCountry";
+            this.txtSearchCountry.PlaceholderText = "Incomplete Country Accepted";
+            this.txtSearchCountry.Size = new System.Drawing.Size(247, 27);
+            this.txtSearchCountry.TabIndex = 24;
+            // 
             // frmMemberList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 530);
-            this.Controls.Add(this.btnSort);
+            this.ClientSize = new System.Drawing.Size(856, 530);
+            this.Controls.Add(this.txtSearchCountry);
+            this.Controls.Add(this.btnSearchByCountry);
+            this.Controls.Add(this.txtSearchCity);
+            this.Controls.Add(this.btnSearchByCity);
             this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.btnSort);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtMemberID);
@@ -283,7 +325,11 @@
         private TextBox txtMemberID;
         private Button btnSave;
         private TextBox txtSearch;
-        private Button btnSearch;
         private Button btnSort;
+        private Button btnSearch;
+        private Button btnSearchByCity;
+        private TextBox txtSearchCity;
+        private Button btnSearchByCountry;
+        private TextBox txtSearchCountry;
     }
 }
