@@ -35,7 +35,7 @@ namespace MyStoreWinApp
                 String email = txtEmail.Text.Trim();
                 String password = txtPassword.Text.Trim();
                 var account = new { email, password };
-                var admin = baseDAL.GetConnectionString;
+                //var admin = baseDAL.GetConnectionString;
                 MemberRepository memberRepository = new MemberRepository();
                 bool checkLogin = memberRepository.Login(email, password);
 

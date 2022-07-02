@@ -28,3 +28,19 @@ D:\FPT_Edu\PRN211FE_Spring2022\C#Code\PRNASS01Draft\DataAccess\obj\Debug\net6.0\
 D:\FPT_Edu\PRN211FE_Spring2022\C#Code\PRNASS01Draft\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
 D:\FPT_Edu\PRN211FE_Spring2022\C#Code\PRNASS01Draft\DataAccess\obj\Debug\net6.0\DataAccess.pdb
 D:\FPT_Edu\PRN211FE_Spring2022\C#Code\PRNASS01Draft\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
+D:\FPT SE\Summer 2022\PRN211\AssHere\PRNASS01Draft\PRNASS01Draft\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
+D:\FPT SE\Summer 2022\PRN211\AssHere\PRNASS01Draft\PRNASS01Draft\DataAccess\bin\Debug\net6.0\DataAccess.dll
+D:\FPT SE\Summer 2022\PRN211\AssHere\PRNASS01Draft\PRNASS01Draft\DataAccess\bin\Debug\net6.0\DataAccess.pdb
+D:\FPT SE\Summer 2022\PRN211\AssHere\PRNASS01Draft\PRNASS01Draft\DataAccess\bin\Debug\net6.0\BusinessObject.dll
+D:\FPT SE\Summer 2022\PRN211\AssHere\PRNASS01Draft\PRNASS01Draft\DataAccess\bin\Debug\net6.0\BusinessObject.pdb
+D:\FPT SE\Summer 2022\PRN211\AssHere\PRNASS01Draft\PRNASS01Draft\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+D:\FPT SE\Summer 2022\PRN211\AssHere\PRNASS01Draft\PRNASS01Draft\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT SE\Summer 2022\PRN211\AssHere\PRNASS01Draft\PRNASS01Draft\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+D:\FPT SE\Summer 2022\PRN211\AssHere\PRNASS01Draft\PRNASS01Draft\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+D:\FPT SE\Summer 2022\PRN211\AssHere\PRNASS01Draft\PRNASS01Draft\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\FPT SE\Summer 2022\PRN211\AssHere\PRNASS01Draft\PRNASS01Draft\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CopyComplete
+D:\FPT SE\Summer 2022\PRN211\AssHere\PRNASS01Draft\PRNASS01Draft\DataAccess\obj\Debug\net6.0\DataAccess.dll
+D:\FPT SE\Summer 2022\PRN211\AssHere\PRNASS01Draft\PRNASS01Draft\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
+D:\FPT SE\Summer 2022\PRN211\AssHere\PRNASS01Draft\PRNASS01Draft\DataAccess\obj\Debug\net6.0\DataAccess.pdb
+D:\FPT SE\Summer 2022\PRN211\AssHere\PRNASS01Draft\PRNASS01Draft\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
+D:\FPT SE\Summer 2022\PRN211\AssHere\PRNASS01Draft\PRNASS01Draft\DataAccess\bin\Debug\net6.0\appsettings.json

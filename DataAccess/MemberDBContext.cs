@@ -244,8 +244,8 @@ namespace DataAccess
             try
             {
                 var parameters = new List<SqlParameter>();
-                parameters.Add(dataProvider.CreateParameter("@Email", 100, Email, DbType.Int32));
-                parameters.Add(dataProvider.CreateParameter("@Password", 100, Email, DbType.Int32));
+                parameters.Add(dataProvider.CreateParameter("@Email", 100, Email, DbType.String));
+                parameters.Add(dataProvider.CreateParameter("@Password", 100, Password, DbType.String));
 
                 dataReader = dataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection, parameters.ToArray());
                 if (dataReader.Read())
@@ -275,7 +275,7 @@ namespace DataAccess
             }
             finally
             {
-                dataReader.Close();
+                //dataReader.Close();
                 CloseConnection();
             }
         }
