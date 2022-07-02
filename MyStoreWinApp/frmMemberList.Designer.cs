@@ -40,8 +40,14 @@
             this.txtCountry = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvMemberList = new System.Windows.Forms.DataGridView();
+            this.lbMemberID = new System.Windows.Forms.Label();
+            this.txtMemberID = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnSort = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).BeginInit();
             this.SuspendLayout();
             // 
             // lbMemListTitle
@@ -82,7 +88,7 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(105, 372);
+            this.btnLoad.Location = new System.Drawing.Point(12, 425);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(94, 29);
             this.btnLoad.TabIndex = 4;
@@ -138,7 +144,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(502, 372);
+            this.btnDelete.Location = new System.Drawing.Point(625, 425);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(94, 29);
             this.btnDelete.TabIndex = 10;
@@ -148,7 +154,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(315, 372);
+            this.btnAdd.Location = new System.Drawing.Point(141, 425);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(94, 29);
             this.btnAdd.TabIndex = 11;
@@ -156,22 +162,87 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // dataGridView1
+            // dgvMemberList
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 178);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(707, 188);
-            this.dataGridView1.TabIndex = 12;
+            this.dgvMemberList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMemberList.Location = new System.Drawing.Point(12, 231);
+            this.dgvMemberList.Name = "dgvMemberList";
+            this.dgvMemberList.RowHeadersWidth = 51;
+            this.dgvMemberList.RowTemplate.Height = 29;
+            this.dgvMemberList.Size = new System.Drawing.Size(707, 188);
+            this.dgvMemberList.TabIndex = 12;
+            // 
+            // lbMemberID
+            // 
+            this.lbMemberID.AutoSize = true;
+            this.lbMemberID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbMemberID.Location = new System.Drawing.Point(12, 180);
+            this.lbMemberID.Name = "lbMemberID";
+            this.lbMemberID.Size = new System.Drawing.Size(110, 28);
+            this.lbMemberID.TabIndex = 13;
+            this.lbMemberID.Text = "Member ID";
+            // 
+            // txtMemberID
+            // 
+            this.txtMemberID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtMemberID.Location = new System.Drawing.Point(174, 177);
+            this.txtMemberID.Name = "txtMemberID";
+            this.txtMemberID.PlaceholderText = "Member ID";
+            this.txtMemberID.ReadOnly = true;
+            this.txtMemberID.Size = new System.Drawing.Size(188, 34);
+            this.txtMemberID.TabIndex = 14;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(502, 425);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(94, 29);
+            this.btnSave.TabIndex = 15;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(502, 185);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PlaceholderText = "Incomplete Name Accepted";
+            this.txtSearch.Size = new System.Drawing.Size(217, 27);
+            this.txtSearch.TabIndex = 17;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSearch.Location = new System.Drawing.Point(402, 177);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(94, 40);
+            this.btnSearch.TabIndex = 18;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnSort
+            // 
+            this.btnSort.Location = new System.Drawing.Point(268, 425);
+            this.btnSort.Name = "btnSort";
+            this.btnSort.Size = new System.Drawing.Size(119, 29);
+            this.btnSort.TabIndex = 19;
+            this.btnSort.Text = "Sort By Name";
+            this.btnSort.UseVisualStyleBackColor = true;
+            this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // frmMemberList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(742, 530);
+            this.Controls.Add(this.btnSort);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.txtMemberID);
+            this.Controls.Add(this.lbMemberID);
+            this.Controls.Add(this.dgvMemberList);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.txtCountry);
@@ -186,7 +257,8 @@
             this.Controls.Add(this.lbMemListTitle);
             this.Name = "frmMemberList";
             this.Text = "frmMemberList";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmMemberList_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMemberList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,6 +278,12 @@
         private TextBox txtCountry;
         private Button btnDelete;
         private Button btnAdd;
-        private DataGridView dataGridView1;
+        private DataGridView dgvMemberList;
+        private Label lbMemberID;
+        private TextBox txtMemberID;
+        private Button btnSave;
+        private TextBox txtSearch;
+        private Button btnSearch;
+        private Button btnSort;
     }
 }

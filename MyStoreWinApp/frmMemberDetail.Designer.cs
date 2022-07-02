@@ -60,6 +60,7 @@
             this.txtMemberID.Location = new System.Drawing.Point(219, 78);
             this.txtMemberID.Name = "txtMemberID";
             this.txtMemberID.PlaceholderText = "Member ID";
+            this.txtMemberID.ReadOnly = true;
             this.txtMemberID.Size = new System.Drawing.Size(230, 27);
             this.txtMemberID.TabIndex = 1;
             // 
@@ -103,6 +104,7 @@
             this.txtEmail.Location = new System.Drawing.Point(219, 144);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PlaceholderText = "Email";
+            this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(230, 27);
             this.txtEmail.TabIndex = 6;
             // 

@@ -9,6 +9,20 @@ namespace DataAccess.MemberRepository
 {
     public class MemberRepository : IMemberRepository
     {
+        
+        public void InitAdmin()
+        {
+            MemberObject admin = MemberDBContext.Instance.GetDefaultAdmin();
+            MemberObject flag = GetByEmail(admin.Email);
+            if(flag == null)
+            {
+                Create(admin);
+            } else
+            {
+
+            }
+        }
+        
         public bool Create(MemberObject mem)
         {
             try
@@ -18,8 +32,7 @@ namespace DataAccess.MemberRepository
                 return true;
             } catch(Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return false;
+                throw new Exception("This email has been registered to another account!");
             }
         }
 
@@ -86,9 +99,22 @@ namespace DataAccess.MemberRepository
                 return true;
             } catch(Exception ex)
             {
-                Console.WriteLine("Update Failed");
+                Console.WriteLine("Update Failed Error: " + ex.Message);
                 return false;
             }
+        }
+        public MemberObject GetByEmail(string email)
+        {
+            MemberObject mem = new MemberObject();
+            mem = MemberDBContext.Instance.GetMemberByEmail(email);
+            return mem;
+        }
+
+        public List<MemberObject> SearchByName(string name)
+        {
+            List<MemberObject> result = new List<MemberObject>();
+            result = MemberDBContext.Instance.GetMemberByName(name);
+            return result;
         }
     }
 }

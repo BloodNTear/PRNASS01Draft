@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using BusinessObject;
+using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,18 @@ namespace DataAccess
             IConfiguration config = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json", true, true).Build();
             connectionString = config["ConnectionStrings:DefaultConnection"];
             return connectionString;
+        }
+
+        public MemberObject GetDefaultAdmin()
+        {
+            MemberObject admin = new MemberObject();
+            IConfiguration config = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json", true, true).Build();
+            admin.Email = config["DefaultUser:Email"];
+            admin.Password = config["DefaultUser:Password"];
+            admin.MemberName = config["DefaultUser:Name"];
+            admin.City = config["DefaultUser:City"];
+            admin.Country = config["DefaultUser:Country"];
+            return admin;
         }
 
         public void CloseConnection()

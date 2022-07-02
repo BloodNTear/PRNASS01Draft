@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAccess.MemberRepository;
 using DataAccess;
+using BusinessObject;
 
 namespace MyStoreWinApp
 {
@@ -28,28 +29,32 @@ namespace MyStoreWinApp
                
                 
                 BaseDAL baseDAL = new BaseDAL();
-                if(txtEmail.Text.Length < 6)
-                    throw new Exception("Sai tên đăng nhập");
-                if(txtPassword.Text.Length < 4)
-                    throw new Exception("Sai mật khẩu");
                 String email = txtEmail.Text.Trim();
                 String password = txtPassword.Text.Trim();
-                var account = new { email, password };
-                //var admin = baseDAL.GetConnectionString;
                 MemberRepository memberRepository = new MemberRepository();
                 bool checkLogin = memberRepository.Login(email, password);
 
                 if (checkLogin != false)
                 {
                     frmMemberList frmMemberList = new frmMemberList();
-                    frmMemberList.ShowDialog();
+                    MemberObject admin = MemberDBContext.Instance.GetDefaultAdmin();
+                    if(email.Equals(admin.Email))
+                    {
+                        frmMemberList.ShowDialog();
+                    } else
+                    {
+                        MemberObject member = memberRepository.GetByEmail(email);
+                        frmMemberDetail frmMemberDetail = new frmMemberDetail { flag = true, member = member};
+                        frmMemberDetail.ShowDialog();
+                    }
+                    this.Close();
                 } else
                 {
-                    throw new Exception("Sai tk hoặc mk");
+                    throw new Exception("Incorrect Email or Password");
                 }
             } catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Lỗi đăng nhập");
+                MessageBox.Show(ex.Message, "Login Error");
             }
         }
 

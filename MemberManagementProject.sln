@@ -12,6 +12,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business Layer", "Business Layer", "{B6C8E282-217D-4198-835E-8FB7952A67B6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Layer", "Data Layer", "{CD859DD9-A2FA-4CDD-AE4A-38EE9FDF6314}"
+	ProjectSection(SolutionItems) = preProject
+		Script.txt = Script.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation Layer", "Presentation Layer", "{86E3B9B9-C8B7-4A84-B0FA-D1DA23F70F3A}"
 EndProject
